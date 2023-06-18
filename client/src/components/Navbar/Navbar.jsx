@@ -5,7 +5,19 @@ import classes from './Navbar.module.css';
 
 const Navbar = () => {
 	const [open, setOpen] = useState(false);
+	const [mode , setMode]  = useState('light');
+   function toggleMode(){
+   if(mode==='light'){
+    setMode('dark');
+    document.body.style.backgroundColor='#263238';
+    }
 
+   else{
+     setMode('light');
+    document.body.style.backgroundColor='white';
+   }
+
+  }
 	const changeOpen = () => {
 		setOpen(!open);
 	};
@@ -67,6 +79,12 @@ const Navbar = () => {
 									></i>
 									Contact
 								</li>
+							</NavLink>
+							<NavLink onClick={toggleMode}>
+							<li className={classes.nav__item}>
+									DarkMode
+									</li>
+								 
 							</NavLink>
 						</ul>
 						{open && (

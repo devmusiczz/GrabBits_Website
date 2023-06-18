@@ -18,6 +18,7 @@ ReactGA.initialize('G-PG8HC34H6V');
 import PropagateLoader from 'react-spinners/PropagateLoader';
 const App = () => {
 	const [loading, setLoading] = useState(false);
+	
 	useEffect(() => {
 		setLoading(true);
 		setTimeout(() => {
